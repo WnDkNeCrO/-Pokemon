@@ -1,0 +1,338 @@
+/* ---------- General settings ---------- */
+
+:root {
+    --background: #101512;
+    --surface: #19221d;
+    --surface-light: #222e26;
+    --text: #e7eee8;
+    --muted: #a9b7ac;
+    --accent: #8bd49b;
+    --border: #35453a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- Header and navigation ---------- */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 6%;
+    background: #0b0f0c;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--accent);
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.navigation a {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--accent);
+}
+
+/* ---------- Main sections ---------- */
+
+main {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 100px 0 80px;
+    max-width: 850px;
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin: 10px 0 20px;
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
+    line-height: 1.1;
+}
+
+.hero-text {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 1.15rem;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.page-heading {
+    padding: 65px 0 25px;
+}
+
+.page-heading h1 {
+    margin: 8px 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.page-heading > p:last-child {
+    max-width: 720px;
+    color: var(--muted);
+}
+
+.content-section {
+    padding: 35px 0;
+    border-top: 1px solid var(--border);
+}
+
+.content-section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.content-section p {
+    max-width: 850px;
+}
+
+.content-section p,
+figcaption {
+    color: var(--muted);
+}
+
+.content-section strong {
+    color: var(--text);
+}
+
+/* ---------- Buttons and cards ---------- */
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 20px;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: var(--accent);
+    color: #101512;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: transparent;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.game-card {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.cover-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.info-card {
+    display: block;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.info-card:hover {
+    background: var(--surface-light);
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+.info-card h3 {
+    color: var(--accent);
+}
+
+.info-card p {
+    margin-bottom: 0;
+}
+
+/* ---------- Map and timeline ---------- */
+
+.route-map {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.note {
+    font-size: 0.9rem;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    padding-left: 8px;
+}
+
+.timeline strong {
+    color: var(--accent);
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: var(--surface-light);
+    color: var(--accent);
+}
+/* ---------- Team gallery ---------- */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.pokemon-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+}
+
+.pokemon-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #0b0f0c;
+}
+
+.pokemon-info {
+    padding: 20px;
+}
+
+.pokemon-info h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.pokemon-info p {
+    margin: 8px 0;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    margin-top: 50px;
+    padding: 30px 6%;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 760px) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navigation {
+        gap: 10px 14px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .game-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 90%;
+    }
+}
